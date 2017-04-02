@@ -6,8 +6,8 @@ package pillaihoc.facerecognizedvoting.helper;
 public class Constants {
     //public static final String BASE_URL = "http://10.0.3.2:8888/api/"; //Genymotion
     public static final String BASE_URL = "http://192.168.43.40/api/"; //Local URL
-    public static final String APP_ID = "ac8b2b0a";
-    public static final String APP_KEY = "0bddef4ac59384c021783bfbfb29a831";
+    public static final String APP_ID = "APP_ID";
+    public static final String APP_KEY = "KEY_HERE";
 
     public static final String UPDATEDETAILS = "updateDetails.php";
     public static final String DOREGISTER = "doRegister.php";
