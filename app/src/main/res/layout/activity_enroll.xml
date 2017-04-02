@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".activities.EnrollActivity"
+    tools:ignore="HardcodedText,NestedWeights">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/toolbar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imgPersonImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20"
+        android:contentDescription="PersonImage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.80"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/btnEnroll"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Enroll"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnSnapPhoto"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Take photo"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".activities.AdminHomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:padding="4dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etEventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Event Name"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/email"
+                    app:met_singleLineEllipsis="true" />
+
+                <view
+                    android:id="@+id/RecyclerViewVolunteers"
+                    class="android.support.v7.widget.RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scrollbarFadeDuration="0" />
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnStartEvent"
+                android:background="@drawable/right_arrow"
+                android:layout_gravity="bottom|right"
+                android:layout_width="60dp"
+                android:layout_margin="10dp"
+                android:layout_height="60dp"
+                android:text="Start event" />
+
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

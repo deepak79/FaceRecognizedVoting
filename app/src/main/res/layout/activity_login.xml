@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".activities.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/toolbar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:padding="4dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            tools:ignore="InefficientWeight|HardcodedText">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/email"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/password"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etTokenNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Token Number"
+                android:inputType="number"
+                android:visibility="gone"
+                android:maxLength="8"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/password"
+                app:met_singleLineEllipsis="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rbAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Admin" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rbUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="User" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Login"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvNewUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.50"
+                    android:gravity="center"
+                    android:text="New User? Click here"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/md_blue_800" />
+
+                <Button
+                    android:id="@+id/btnForgot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:text="Forgot Password?"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

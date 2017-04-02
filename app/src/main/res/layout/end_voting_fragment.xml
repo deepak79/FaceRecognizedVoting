@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".activities.AdminHomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:padding="4dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Live Event Status"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/md_black_1000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Event Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/md_black_1000" />
+
+                <TextView
+                    android:id="@+id/tvEventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Event Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/md_black_1000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Event Started On"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/md_black_1000" />
+
+                <TextView
+                    android:id="@+id/tvEventStartedOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Event Started On"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/md_black_1000" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnEndEvent"
+                android:layout_width="match_parent"
+                android:text="End event"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="All volunteers list"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/md_black_1000" />
+
+            <view
+                android:id="@+id/RecyclerViewVolunteers"
+                class="android.support.v7.widget.RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:scrollbarFadeDuration="0" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

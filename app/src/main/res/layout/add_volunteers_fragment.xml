@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".activities.AdminHomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:padding="4dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LinearTouch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgPartyLogo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="PartyLogo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tap here to add image.." />
+            </LinearLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etVName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Volunteer Name"
+                android:inputType="textPersonName"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/email"
+                app:met_singleLineEllipsis="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Ward"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/md_black_1000" />
+
+            <Spinner
+                android:id="@+id/spWard"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Political Party Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/md_black_1000" />
+
+            <Spinner
+                android:id="@+id/spParty"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog" />
+
+            <Button
+                android:id="@+id/btnAddVolunteer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Volunteer" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

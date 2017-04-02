@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".activities.AdminHomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:padding="4dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <view
+                android:id="@+id/RecyclerViewUsers"
+                class="android.support.v7.widget.RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:scrollbarFadeDuration="0" />
+
+
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

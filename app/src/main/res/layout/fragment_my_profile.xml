@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".activities.HomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/personplaceholder" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="Change password"
+            android:textAllCaps="false"
+            android:textSize="10sp" />
+
+    </FrameLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:padding="4dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Deepak Gavkar"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/md_blue_900"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="deepak.gavkar@gmail.com"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/md_blue_700" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvUserWard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:gravity="right"
+                    android:text="M EAST"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/md_blue_700" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvUserGenderAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:gravity="left"
+                    android:text="21 / M"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/md_blue_700" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

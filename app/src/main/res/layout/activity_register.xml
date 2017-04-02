@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".activities.RegisterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/toolbar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffffff"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:padding="4dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            tools:ignore="InefficientWeight|HardcodedText">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etTokenNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Token number"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/email"
+                android:visibility="gone"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/password"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/email"
+                app:met_singleLineEllipsis="true" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone number"
+                android:inputType="number"
+                android:maxLength="10"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/email"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/password"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etPassword1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Retype password"
+                android:inputType="textPassword"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@drawable/password"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etBirthDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Date of birth"
+                android:inputType="date"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/primary"
+                app:met_iconLeft="@drawable/password"
+                app:met_singleLineEllipsis="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Ward" />
+
+            <Spinner
+                android:id="@+id/spWard"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:text="Male" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:text="Female" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tvAlreadyUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/md_blue_800"
+                android:text="@string/already" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
